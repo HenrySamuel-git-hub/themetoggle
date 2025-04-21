@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: 'Arial', sans-serif;
+                transition: background-color 0.4s ease, color 0.4s ease;
+                display: flex;
+                justify-content:space-evenly;
+                align-items:center;
+                height: 50vh;
+                background-color: white;
+                color: black;
+              }
+          
+              /* Button style */
+              #btn1 {
+                padding: 10px 10px;
+                font-size: 2rem;
+                background-color:black;
+                color: white;
+                border: none;
+                border-radius: 50px;
+                cursor: pointer;
+                transition: transform 0.3s ease, background-color 0.3s ease;
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+              }
+              p{
+                font-size: 25px;
+                font-weight: bold;
+              }
+              .container {
+                background-color: #f2f2f2;
+                padding: 5px 50px;
+                border-radius:45px;
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+                display: flex;
+                align-items: center;
+                gap: 25px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+        <p>MODE</p>
+        <button id="btn1">🌙</button>
+    </div>
+        <script>
+            document.body.style.backgroundColor = "white";
+            const btn1=document.getElementById("btn1");
+            btn1.addEventListener("click",()=>{
+                if(document.body.style.backgroundColor==="white"){
+                    document.body.style.backgroundColor="black";
+                    btn1.textContent="🔆";
+                    btn1.style.backgroundColor = "white";
+                }else if(document.body.style.backgroundColor==="black"){
+                    document.body.style.backgroundColor="white";
+                    btn1.textContent="🌙";
+                    btn1.style.backgroundColor = "black";
+                }
+            })
+        </script>
+    </body>
+</html>
